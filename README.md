@@ -38,7 +38,7 @@ Tiene un backend realizado con Firebase
 ## Estructura
 
 ![estructura FireBase](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen.png)
-![estructura src](https://raw.githubusercontent.com/jespitiasa/petit-racine/main/.github/images/imagen-2.png)
+![estructura src](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen-2.png)
 
 
 ## ScreenShots
