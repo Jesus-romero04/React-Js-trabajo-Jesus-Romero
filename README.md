@@ -46,4 +46,8 @@ Tiene un backend realizado con Firebase
 ![image00](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen-3.png)
 ![image01](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen-4.png)
 ![image02](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen-5.png)
+<<<<<<< HEAD
 ![image03](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen-6.png)
+=======
+![image03](https://raw.githubusercontent.com/Jesus-romero04/React-Js-trabajo-Jesus-Romero/main/.github/images/imagen-6.png)
+>>>>>>> 763f2f1cb90ea7b17342fb527ae9f6122aded86f
