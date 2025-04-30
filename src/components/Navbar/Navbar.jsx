@@ -1,43 +1,21 @@
-import './Navbar.css';
-import logo from "../../assets/iconos/logo-tienda-express.png"; 
-import { IconButton } from "@mui/material";
-import Products from '@mui/icons-material/StoreOutlined';
-import MaleIcon from '@mui/icons-material/MaleOutlined';
-import FemaleIcon from '@mui/icons-material/Female';
-import CartWidget from '../CartWidget/CartWidget';
-import { Link } from 'react-router-dom';
-
-function Navbar() {
-    return (
-        <header>
-            <nav className="nav-bar">
-                <img src={logo} className='logo' alt="Logo Tienda Express" />
-
-                <ul className='nav-bar-options'>
-                    <li className='nav-bar-item'>
-                        <IconButton>
-                            <Products className='menu-icon' />
-                        </IconButton>
-                        <Link to="/">Productos</Link>
-                    </li>
-                    <li className='nav-bar-item'>
-                        <IconButton>
-                            <MaleIcon className='menu-icon' />
-                        </IconButton>
-                        <Link to="/productos/mens-shoes">Calzado masculino</Link> 
-                    </li>
-                    <li className='nav-bar-item'>
-                        <IconButton>
-                            <FemaleIcon className='menu-icon' />
-                        </IconButton>
-                        <Link to="/productos/womens-dresses">Vestidos femeninos</Link> 
-                    </li>
-                </ul>
-
-                <CartWidget />
-            </nav>
-        </header>
-    );
+import CartWidjet from './CartWidget';
+import './NavBar.css'
+import { NavLink, Link } from 'react-router-dom';
+const NavBar = () => {
+  return (
+    <nav className='navbar'>
+        <Link to="/" className='brand'>
+          <img src='/public/img/logo-tienda-jr.png' />
+        </Link>
+      <ul className='categories'>
+        <NavLink to="/category/suculentas" className={({ isActive }) => isActive ? "category-active" : "category"}>Suculentas</NavLink>
+        <NavLink to="/category/cactus" className={({ isActive }) => isActive ? "category-active" : "category"}>Cactus</NavLink>
+        <NavLink to="/category/orquideas" className={({ isActive }) => isActive ? "category-active" : "category"}>Orquideas</NavLink>
+        <NavLink to="/category/bonsai" className={({ isActive }) => isActive ? "category-active" : "category"}>Bonsai</NavLink>
+      </ul>
+      <CartWidjet />
+    </nav>
+  )
 }
 
-export default Navbar;
+export default NavBar

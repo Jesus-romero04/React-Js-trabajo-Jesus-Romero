@@ -1,22 +1,33 @@
+import { CartProvider } from './context/CartContext'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import ItemListContainer from './components/iItemListContainer/ItemListContainer.jsx'
+import NavBar from './components/navbar/NavBar.jsx'
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer.jsx'
+import Cart from './components/cart/Cart.jsx'
+import NotFound from './components/error/NotFound.jsx'
+import Checkout from './components/checkout/Checkout.jsx'
 import './App.css'
-import Navbar from "./components/Navbar/Navbar";
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDetail from './components/ItemDetail/ItemDetail';
-
 function App() {
   return (
-    <>          
+    <div className='container-app'>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer /> } />         
-          <Route path="/productos/:category" element={<ItemListContainer /> } />
-          <Route path="/detalle/:id" element={<ItemDetail /> } />        
-        </Routes>
-      </BrowserRouter>      
-    </>   
-  )
-};
+        <CartProvider>
+          <NavBar />
+          <ToastContainer position='bottom-right' theme='dark'/>
+          <Routes>
+            <Route path="/" element={<ItemListContainer saludo={"Bienvenidos"} />} />
+            <Route path="/category/:idCategory" element={<ItemListContainer saludo={"Nuestros Productos"} />} />
+            <Route path="/detail/:idProduct" element={<ItemDetailContainer saludo={"Nuestros Productos"}/>} />
+            <Route path="/cart" element={<Cart saludo={"Tus productos"}/>} />
+            <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='*' element={<NotFound/>}/>
+          </Routes>
+        </CartProvider>
 
-export default App;
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App
